@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loja Under Armor</title>
+  <title>IAG</title>
   <style>
       body {
           font-family: Arial, sans-serif;
@@ -12,13 +12,22 @@
           background-color: #f4f4f4;
       }
       header {
-          background: #333;
+          background: #333333;
           color: #fff;
           padding: 10px 20px;
-          text-align: center;
+          position: relative; 
+      }
+      .header-content {
+          text-align: center; 
       }
       h1 {
           margin: 0;
+      }
+      .logo {
+          height: 50px; 
+          position: absolute; 
+          top: 10px; 
+          right: 20px; 
       }
       .container {
           max-width: 1200px;
@@ -38,6 +47,17 @@
       .product img {
           max-width: 100%;
           height: auto;
+          cursor: pointer;
+      }
+      .description {
+          display: none; 
+          margin-top: 10px;
+          text-align: left;
+      }
+      .toggle-description {
+          cursor: pointer;
+          color: #333;
+          margin-top: 5px;
       }
       footer {
           text-align: center;
@@ -49,40 +69,75 @@
           width: 100%;
       }
   </style>
+  <script>
+      function toggleDescription(id) {
+          const description = document.getElementById(id);
+          if (description.style.display === "none") {
+              description.style.display = "block";
+          } else {
+              description.style.display = "none";
+          }
+      }
+  </script>
 </head>
 <body>
   <header>
-      <h1>Loja Under Armor</h1>
-      <img src="imgs/under-armour-logo.gif" alt="Logo da Loja" style="height: 50px; vertical-align: middle;">
-      <p>Nesta loja você podera usufluir (pagando um certo preço), pelos melhores produtos de espertes do mercado</p>
+      <div class="header-content">
+          <h1>IAG</h1>
+          <p>Nesta loja você poderá usufruir (pagando um certo preço), pelos melhores produtos de esportes do mercado</p>
+      </div>
+      <img src="imgs/logo.png" alt="Logo da Loja" class="logo">
   </header>
   <div class="container">
       <h2>Produtos em Destaque</h2>
       <div class="product">
-          <img src="imgs/volei.jpg" alt="bola de volei">
-          <h3>Nome do Produto 1</h3>
-          <p>Descrição breve do produto 1.</p>
+          <a href="ATV/esporte/volei/index.html">
+              <img src="imgs/volei.jpg" alt="bola de volei">
+          </a>
+          <h3>Bola de Vôlei</h3>
           <p>Preço: R$ 00,00</p>
-          
+          <p class="toggle-description" onclick="toggleDescription('desc_volei')">▼ Mostrar Descrição</p>
+          <div id="desc_volei" class="description">
+              <p>Material: poliuretano.</p>
+              <p>A câmara é de: evacel. Peso: 240g.</p>
+              <p>Recomendada para uso: treinamento.</p>
+              <p>Medida da circunferência: 60cm.</p>
+          </div>
       </div>
       <div class="product">
-          <img src="imgs/volei.webp" alt="tenis">
-          <h3>Nome do Produto 2</h3>
-          <p>Descrição breve do produto 2.</p>
+          <a href="ATV/esporte/basquete/index.html">
+              <img src="imgs/volei.webp" alt="tenis">
+          </a>
+          <h3>Tenis de Basquete</h3>
           <p>Preço: R$ 00,00</p>
+          <p class="toggle-description" onclick="toggleDescription('desc_basquete')">▼ Mostrar Descrição</p>
+          <div id="desc_basquete" class="description">
+            <p>Entressola: EVA</p>
+            <p>Medida da circunferência: 60cm.</p>
+            <p>Material do Cabedal: Têxtil Sintético</p>
+            <p>
+                    
+                    
+                    Lingueta	Macia
+                    Acolchoada
+                    Palmilha	Integrada
+                    Forrada.
+          </div>
       </div>
       <div class="product">
-          <img src="imgs/pingpong.webp" alt="raquetes">
-          <h3>Nome do Produto 1</h3>
-          <p>Descrição breve do produto 1.</p>
+          <a href="ATV/esporte/tenisdemesa/index.html">
+              <img src="imgs/pingpong.webp" alt="raquetes">
+          </a>
+          <h3>Conjunto PingPong</h3>
           <p>Preço: R$ 00,00</p>
-          
+          <p class="toggle-description" onclick="toggleDescription('desc_pingpong')">▼ Mostrar Descrição</p>
+          <div id="desc_pingpong" class="description">
+              <p>Descrição breve do produto 3.</p>
+          </div>
       </div>
-      
-      <!-- Adicione mais produtos conforme necessário -->
   </div>
   <footer>
-      <p>&copy; 2025 Loja Under Armor. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Loja IAG. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
