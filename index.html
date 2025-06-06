@@ -81,6 +81,13 @@
           height: auto;
           cursor: pointer;
       }
+      .map-container {
+          border: 1px solid #ddd; /* Borda semelhante aos produtos */
+          border-radius: 5px; /* Arredondamento das bordas */
+          padding: 10px; /* Espaçamento interno */
+          margin: 10px; /* Margem externa */
+          text-align: center; 
+      }
       .description {
           display: none; 
           margin-top: 10px;
@@ -123,10 +130,10 @@
   <div class="container">
       <div class="menu">
           <h3>Menu</h3>
-          <a href="pagina1.html">Página 1</a>
-          <a href="pagina2.html">Página 2</a>
-          <a href="pagina3.html">Página 3</a>
-          <a href="pagina4.html">Página 4</a> <!-- Botão adicional -->
+          <a href="index.html">Página principal</a>
+          <a href="ATV/esporte/volei/index.html">vôlei</a>
+          <a href="ATV/esporte/basquete/index.html">Basquete</a>
+          <a href="ATV/esporte/tenisdemesa/index.html">Tênis de Mesa</a>
       </div>
       <div class="products">
           <h2>Produtos em Destaque</h2>
@@ -167,15 +174,29 @@
               <p>Preço: R$ 00,00</p>
               <p class="toggle-description" onclick="toggleDescription('desc_pingpong')">▼ Mostrar Descrição</p>
               <div id="desc_pingpong" class="description">
-                  <p>Conjunto de remo de pingue-pongue com 2 raquetes horizontais</p>
-                  <p>alça confortável</p>
-                  <p>nanotecnologia</p>
-                  <p>durável</p>
-                  <p>madeira de basswood</p>
-                  <p>suprimentos de pingue-pongue</p>
+                  <p>Conjunto de pingue-pongue com 1 raquete.</p>
+                  <p>Alça confortável.</p>
+                  <p>Nanotecnologia.</p>
+                  <p>Durável.</p>
+                  <p>Madeira de basswood.</p>
+                  <p>Suprimentos de pingue-pongue.</p>             
               </div>
           </div>
       </div>
+  </div>
+  <div class="product">
+    <h2>Informaçoes</h2>
+    <p class="toggle-description" onclick="toggleDescription('Informaçoes')">▼ Descrição</p>
+    <div id="Informaçoes" class="description">
+        <p>Formas de pagamentos aceitas: Pix</p>
+        <p>CHAVE PIX: 70620581654</p>
+        <p>Proprietário: Iago Ornels De Souza</p>
+    </div>
+</div>
+  </div>
+  <div class="map-container">      
+      <h2>Localização</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1354.9106248005153!2d-42.30953068650173!3d-16.15522920184276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x74debf0b63fd265%3A0xd64db0172cd62beb!2sIFNMG%20-%20Instituto%20Federal%20do%20Norte%20de%20Minas%20Gerais%2C%20Campus%20Salinas!5e0!3m2!1spt-BR!2sbr!4v1749166493400!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>     
   </div>
   <footer>
       <p>&copy; 2025 Loja IAG. Todos os direitos reservados.</p>
