@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BASQUETE</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      header {
+          background: #333333;
+          color: #fff;
+          padding: 10px 20px;
+          position: relative; 
+      }
+      .header-content {
+          text-align: center; 
+      }
+      h1 {
+          margin: 0;
+      }
+      .logo {
+          height: 50px; 
+          position: absolute; 
+          top: 10px; 
+          right: 20px; 
+      }
+      .container {
+          max-width: 1200px;
+          margin: 20px auto;
+          padding: 20px;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          display: flex; 
+      }
+      .menu {
+          width: 200px; 
+          margin-right: 20px;
+          padding: 10px;
+          background: #eee;
+          border-radius: 8px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .menu h3 {
+          text-align: center;
+      }
+      .menu a {
+          display: block;
+          padding: 10px;
+          margin: 5px 0;
+          text-decoration: none;
+          color: #333;
+          background: #ddd;
+          border-radius: 5px;
+          text-align: center;
+          font-weight: bold;
+      }
+      .menu a:hover {
+          background: #ccc; 
+      }
+      .products {
+          flex: 1; 
+          display: flex;
+          flex-direction: column;
+          align-items: center; 
+      }
+      .product {
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding: 10px;
+          margin: 10px;
+          text-align: center;
+          width: 100%; 
+      }
+      .product img {
+          max-width: 100%;
+          height: auto;
+          cursor: pointer;
+      }
+      .description {
+          display: none; 
+          margin-top: 10px;
+          text-align: left;
+      }
+      .toggle-description {
+          cursor: pointer;
+          color: #333;
+          margin-top: 5px;
+      }
+      footer {
+          text-align: center;
+          padding: 20px;
+          background: #333;
+          color: #fff;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+      }
+  </style>
+  <script>
+      function toggleDescription(id) {
+          const description = document.getElementById(id);
+          if (description.style.display === "none") {
+              description.style.display = "block";
+          } else {
+              description.style.display = "none";
+          }
+      }
+  </script>
+</head>
+<body>
+  <header>
+      <div class="header-content">
+          <h1>Basquete IAG</h1>
+          <p>Melhores produtos do mercado</p>
+      </div>
+      <img src="../../../imgs/logo.png" alt="Logo da Loja" class="logo">
+  </header>
+  <div class="container">
+      <div class="menu">
+          <h3>Menu</h3>
+          <a href="../../../index.html">Página principal</a>
+          <a href="../basquete/index.html">Basquete</a>
+          <a href="../volei/index.html">vôlei</a>
+          <a href="../tenisdemesa/index.html">Tênis de Mesa</a>
+      </div>
+      <div class="products">
+          <h2>Produtos em Destaque</h2>
+          <div class="product">  
+              <img src="../../../imgs/volei.jpg" alt="bola de volei">
+              <h3>Bola de Vôlei</h3>
+              <p>Preço: R$ 600,00</p>
+              <p class="toggle-description" onclick="toggleDescription('desc_volei')">▼ Mostrar Descrição</p>
+              <div id="desc_volei" class="description">
+                  <p>Material: poliuretano.</p>
+                  <p>A câmara é de: evacel. Peso: 240g.</p>
+                  <p>Recomendada para uso: treinamento.</p>
+                  <p>Medida da circunferência: 60cm.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="product">
+      <h2>Informações</h2>
+      <p class="toggle-description" onclick="toggleDescription('informacoes')">▼ Descrição</p>
+      <div id="informacoes" class="description">
+          <p>Formas de pagamentos aceitas: Pix</p>
+          <p>CHAVE PIX: 70620581654</p>
+          <p>Proprietário: Iago Ornels De Souza</p>
+      </div>
+  </div>
+  <footer>
+      <p>&copy; 2025 Loja IAG. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
