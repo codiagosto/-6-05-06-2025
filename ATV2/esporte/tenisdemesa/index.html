@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TÊNIS-DE-MESA</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      header {
+          background: #333333;
+          color: #fff;
+          padding: 10px 20px;
+          position: relative; 
+      }
+      .header-content {
+          text-align: center; 
+      }
+      h1 {
+          margin: 0;
+      }
+      .logo {
+          height: 50px; 
+          position: absolute; 
+          top: 10px; 
+          right: 20px; 
+      }
+      .container {
+          max-width: 1200px;
+          margin: 20px auto;
+          padding: 20px;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          display: flex; 
+      }
+      .menu {
+          width: 200px; 
+          margin-right: 20px;
+          padding: 10px;
+          background: #eee;
+          border-radius: 8px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .menu h3 {
+          text-align: center;
+      }
+      .menu a {
+          display: block;
+          padding: 10px;
+          margin: 5px 0;
+          text-decoration: none;
+          color: #333;
+          background: #ddd;
+          border-radius: 5px;
+          text-align: center;
+          font-weight: bold;
+      }
+      .menu a:hover {
+          background: #ccc; 
+      }
+      .products {
+          flex: 1; 
+          display: flex;
+          flex-direction: column;
+          align-items: center; 
+      }
+      .product {
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding: 10px;
+          margin: 10px;
+          text-align: center;
+          width: 100%; 
+      }
+      .product img {
+          max-width: 100%;
+          height: auto;
+          cursor: pointer;
+      }
+      .description {
+          display: none; 
+          margin-top: 10px;
+          text-align: left;
+      }
+      .toggle-description {
+          cursor: pointer;
+          color: #333;
+          margin-top: 5px;
+      }
+      footer {
+          text-align: center;
+          padding: 20px;
+          background: #333;
+          color: #fff;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+      }
+  </style>
+  <script>
+      function toggleDescription(id) {
+          const description = document.getElementById(id);
+          if (description.style.display === "none") {
+              description.style.display = "block";
+          } else {
+              description.style.display = "none";
+          }
+      }
+  </script>
+</head>
+<body>
+  <header>
+      <div class="header-content">
+          <h1>TÊNIS-DE-MESA IAG</h1>
+          <p>Melhores produtos do mercado</p>
+      </div>
+      <img src="../../../imgs/logo.png" alt="Logo da Loja" class="logo">
+  </header>
+  <div class="container">
+      <div class="menu">
+          <h3>Menu</h3>
+          <a href="../../../index.html">Página principal</a>
+          <a href="../basquete/index.html">Basquete</a>
+          <a href="../volei/index.html">Vôlei</a>
+          <a href="../tenisdemesa/index.html">Tênis de Mesa</a>
+      </div>
+      <div class="products">
+          <h2>Um pouco sobre a história do tênis e mesa</h2>
+          <div class="product">
+              <img src="../../../imgs/ping.jpg" alt="historia-basquete">
+              <h3 class="toggle-description" onclick="toggleDescription('deshisoria')">▼ Mostrar Descrição</h3>
+              <div id="deshisoria" class="description">
+                  <h3>História</h3>
+                  <p>Nascido e desenvolvido na Inglaterra durante a segunda metade do Século XIX, teve sua origem a partir do jogo medieval de tênis, que costumava ser jogado tanto ao ar livre quanto em espaços fechados. O tênis de mesa, portanto, foi concebido para ser um passatempo social, jogado em salas fechadas, especialmente no inverno, quando era mais difícil praticar o tênis de campo. Os primeiros registros do tênis de mesa revelam um jogo rude, iniciado por estudantes universitários com livros dispostos no lugar da rede, e por militares que o praticavam com equipamentos improvisados. As raquetes podiam ser de madeira, papelão ou tripa de animal, cobertas algumas vezes por cortiça, lixa ou tecido. As bolas, de cortiça ou borracha. As redes, de diferentes alturas – algumas vezes constituídas de um simples fio. Mesas de diferentes tamanhos, partidas com contagens de 10 ou 100 pontos, saques com um “quique” inicial na metade da mesa do sacador, sistema atual, ou diretamente na outra metade de encontro a um espaço limitado ou não, porém, com a obrigatoriedade de o sacador estar afastado da linha de fundo da mesa. Nunca figuravam quatro tipos diferentes de duplas. Em qualquer caso, era virtualmente o mesmo tipo de jogo, embora tivesse muitos nomes. No Século XIX, James Gibb, inglês, ex-corredor de maratonas, volta de uma viagem de negócios aos Estados Unidos com bolas de celuloide de brinquedo, que ele imaginou poderem ser úteis para este jogo em seu país. Ouvindo-as serem golpeadas por uma raquete oca, de cabo longo e feita de pele de carneiro, então bastante popular, associou os sons produzidos pela bola na raquete com o som ”pingue-pongue”, dando assim origem ao nome do jogo. O nome “Ping Pong” é então criado pela empresa inglesa J. Jaques and Son no final dos anos de 1800s, sendo registrado como marca pela empresa note-americana Parker Brothers. Os primeiros torneios são realizados a partir de 1901, com registro de centenas de participantes. Assim se cria a “Ping-Pong Association”, que é substituída em 1922 pela “Table Tennis Association”, dando lugar à International Table Tennis Federation (ITTF) em 1926. Nos anos de 1950 surge uma das grandes revoluções do esporte: a invenção da esponja ou “sanduíche de borracha”, um novo material para as raquetes que, até hoje, diminui a espessura relativa da raquete. Com a evolução do esporte, a ITTF buscou regular o uso de equipamentos para garantir o equilíbrio e a saúde dos atletas. O jogo ganha velocidade e golpes plásticos, com efeito. A modalidade, criada na Inglaterra, passa a ter dominância asiática, sendo praticado em diferentes partes do mundo. Em diferentes ambientes e por diferentes grupos de pessoas. Este é o tênis de mesa. A sua história está detalhada na linha do tempo, com destaque para fatos marcantes.</p>
+                  <p>Para mais informações copie e cole no Google: https://www.cob.org.br/time-brasil/esportes/1-tenis-de-mesa</p>      
+              </div>
+          </div>
+          <h2>Produtos em Destaque</h2>
+          <div class="product">  
+              <img src="../../../imgs/mesapingpong.webp" alt="bola de volei">
+              <h3>Mesa Para Tênis De Mesa Ping Pong Com Kit Completo Carrefour</h3>
+              <p>Preço: R$ 1.050,00</p>
+              <p class="toggle-description" onclick="toggleDescription('desc_volei')">▼ Mostrar Descrição</p>
+              <div id="desc_volei" class="description">
+                  <p>Características:<br>Mesa Marca: CarrefourModelo: <br>Ping PongMaterial Principal: MDP 15mm e Madeira</p>
+                  <p>Dimensões: <br>Altura: 274 cm <br>Largura: 152 cm <br>Profundidade: 7,6 cm <br>Peso aproximado: 63kg</p>
+              </div>
+          </div>
+          <div class="product">  
+              <img src="../../../imgs/raquete.webp" alt="bola de volei">
+              <h3>Raquete de ping pong Butterfly Viscaria FL (Côncavo)</h3>
+              <p>Preço: R$ 1.489,00</p>
+              <p class="toggle-description" onclick="toggleDescription('desc_voleijoelho')">▼ Mostrar Descrição</p>
+              <div id="desc_voleijoelho" class="description">
+                  <p>A raquete Madeira Butterfly Viscaria FL é a escolha perfeita para jogadores que buscam excelência em desempenho. Com um design moderno e elegante, esta raquete não só impressiona visualmente, mas também oferece um controle excepcional e velocidade, tornando-a ideal para atletas de todos os níveis, desde iniciantes até profissionais. Sua estrutura leve e resistente garante durabilidade e conforto durante o jogo, permitindo movimentos ágeis e precisos. Com uma espessura de folha de 5.7 mm, a Viscaria combina materiais de alta qualidade, como madeira e carbono arylate, para proporcionar uma experiência de jogo superior. A tecnologia avançada incorporada nesta raquete assegura que você possa maximizar seu potencial em cada partida, tornando-a uma adição indispensável ao seu equipamento esportivo.</p>
+              </div>
+          </div>
+          <div class="product">  
+              <img src="../../../imgs/pingpong.webp" alt="bola de volei">
+              <h3>Conjunto PingPong</h3>
+              <p>Preço: R$ 400,00</p>
+              <p class="toggle-description" onclick="toggleDescription('desc_pingpong')">▼ Mostrar Descrição</p>
+              <div id="desc_pingpong" class="description">
+                  <p>Conjunto de pingue-pongue com 1 raquete.</p>
+                  <p>Alça confortável.</p>
+                  <p>Nanotecnologia.</p>
+                  <p>Durável.</p>
+                  <p>Madeira de basswood.</p>
+                  <p>Suprimentos de pingue-pongue.</p>             
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="product">
+      <h2>Informações</h2>
+      <p class="toggle-description" onclick="toggleDescription('informacoes')">▼ Descrição</p>
+      <div id="informacoes" class="description">
+          <p>Formas de pagamentos aceitas: Pix</p>
+          <p>CHAVE PIX: 70620581654</p>
+          <p>Proprietário: Iago Ornels De Souza</p>
+      </div>
+  </div>
+  <footer>
+      <p>&copy; 2025 Loja IAG. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+

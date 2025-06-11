@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BASQUETE</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      header {
+          background: #333333;
+          color: #fff;
+          padding: 10px 20px;
+          position: relative; 
+      }
+      .header-content {
+          text-align: center; 
+      }
+      h1 {
+          margin: 0;
+      }
+      .logo {
+          height: 50px; 
+          position: absolute; 
+          top: 10px; 
+          right: 20px; 
+      }
+      .container {
+          max-width: 1200px;
+          margin: 20px auto;
+          padding: 20px;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          display: flex; 
+      }
+      .menu {
+          width: 200px; 
+          margin-right: 20px;
+          padding: 10px;
+          background: #eee;
+          border-radius: 8px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .menu h3 {
+          text-align: center;
+      }
+      .menu a {
+          display: block;
+          padding: 10px;
+          margin: 5px 0;
+          text-decoration: none;
+          color: #333;
+          background: #ddd;
+          border-radius: 5px;
+          text-align: center;
+          font-weight: bold;
+      }
+      .menu a:hover {
+          background: #ccc; 
+      }
+      .products {
+          flex: 1; 
+          display: flex;
+          flex-direction: column; 
+          align-items: center; 
+      }
+      .product {
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          padding: 10px;
+          margin: 10px;
+          text-align: center;
+          width: 100%; 
+      }
+      .product img {
+          max-width: 100%;
+          height: auto;
+          cursor: pointer;
+      }
+      .description {
+          display: none; 
+          margin-top: 10px;
+          text-align: left;
+      }
+      .toggle-description {
+          cursor: pointer;
+          color: #333;
+          margin-top: 5px;
+      }
+      footer {
+          text-align: center;
+          padding: 20px;
+          background: #333;
+          color: #fff;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+      }
+  </style>
+  <script>
+      function toggleDescription(id) {
+          const description = document.getElementById(id);
+          if (description.style.display === "none") {
+              description.style.display = "block";
+          } else {
+              description.style.display = "none";
+          }
+      }
+  </script>
+</head>
+<body>
+  <header>
+      <div class="header-content">
+          <h1>Basquete IAG</h1>
+          <p>Melhores produtos do mercado</p>
+      </div>
+      <img src="../../../imgs/logo.png" alt="Logo da Loja" class="logo">
+  </header>
+  <div class="container">
+      <div class="menu">
+          <h3>Menu</h3>
+          <a href="../../../index.html">Página principal</a>
+          <a href="../basquete/index.html">Basquete</a>
+          <a href="../volei/index.html">Vôlei</a>
+          <a href="../tenisdemesa/index.html">Tênis de Mesa</a>
+      </div>
+      <div class="products">
+          <h2>Um pouco sobre a história do Basquete</h2>
+          <div class="product">
+              <img src="../../../imgs/historia-do-basquete.webp" alt="historia-basqute">
+              <h3 class="toggle-description" onclick="toggleDescription('deshisoria')">▼ Mostrar Descrição</h3>
+              <div id="deshisoria" class="description">
+                <h3>
+                    Historia e Curiosidades
+                </h3>
+                <p>O basquete foi criado em 1891, por James Naismith, um professor de educação física canadense. Ele queria criar um esporte que pudesse ser praticado em ambientes fechados durante o inverno rigoroso de Massachusetts, nos EUA. A primeira partida foi jogada com uma bola de futebol e cestas de pêssego fixadas em varandas.</p>
+                <p>Principais marcos:</p>
+                <p>1936: Basquete vira esporte olímpico (Jogos de Berlim).</p>      
+                <p>1946: Fundação da NBA (National Basketball Association).</p>
+                <p>1992: "Dream Team" dos EUA nos Jogos Olímpicos de Barcelona marca a era moderna do basquete globalizado.</p>
+                <p>🏆 Principais Campeonatos Internacionais: NBA (EUA) – Maior liga profissional do mundo. FIBA World Cup (Copa do Mundo de Basquete) – Organizada pela FIBA, reúne seleções do mundo todo. Jogos Olímpicos – Disputado a cada 4 anos com seleções nacionais. EuroLeague – Principal liga da Europa. No Brasil: NBB (Novo Basquete Brasil) – Principal liga brasileira, criada em 2008. Campeonato Brasileiro de Basquete Feminino – Competição de clubes femininos.</p>
+                <p>🧍‍♂️ Grandes Atletas Internacionais: Michael Jordan – Considerado o maior de todos os tempos. LeBron James – Ícone atual, destaque na NBA desde 2003. Kobe Bryant – Lenda dos Lakers, com 5 títulos da NBA. Stephen Curry – Revolucionou o jogo com os arremessos de três pontos. Shaquille O’Neal, Magic Johnson, Larry Bird, Tim Duncan – Todos lendas com impacto histórico. Brasileiros: Oscar Schmidt – "Mão Santa", maior pontuador da história do basquete mundial. Hortência e Magic Paula – Ícones do basquete feminino. Anderson Varejão, Nenê, Leandrinho, Tiago Splitter – Jogaram na NBA. Damiris Dantas e Érika de Souza – Destaques no basquete feminino mundial.</p>
+                <p>⛹️‍♂️ Regras Básicas Dois times de cinco jogadores em quadra. Objetivo: Fazer a bola passar pelo aro adversário (cesta = 2 ou 3 pontos). Vence quem tiver mais pontos ao fim dos 4 períodos de 10 ou 12 minutos (dependendo da liga). É proibido andar com a bola sem quicá-la (drible) e há limites de tempo para atacar (24 segundos na NBA).</p>
+                <p>📌 Curiosidades O primeiro placar de basquete da história foi 1 a 0. A NBA tem jogos com média de público superior a 17 mil pessoas. A bola de basquete oficial tem cerca de 75 cm de circunferência. O Brasil foi campeão mundial masculino em 1959 e 1963.</p>   
+                <p>Para mais informacoes copie e cole no google: https://www.cob.org.br/time-brasil/esportes/1-basquete</p>      
+              </div>
+          </div>
+          <h2>Produtos em Destaque</h2>
+          <div class="product">
+              <img src="../../../imgs/volei.webp" alt="Tênis de Basquete">
+              <h3>Tênis de Basquete</h3>
+              <p>Preço: R$ 500,00</p>
+              <p class="toggle-description" onclick="toggleDescription('desc_basquete')">▼ Mostrar Descrição</p>
+              <div id="desc_basquete" class="description">
+                <h3>
+                    Tamanhos disponiveis
+                    <li>40</li>
+                    <li>42</li>
+                    <li>44</li>
+                    <li>80</li>
+                </h3>
+                  <p>Entressola: EVA</p>
+                  <p>Medida da circunferência: 60cm.</p>
+                  <p>Material do Cabedal: Têxtil Sintético</p>
+                  <p>Lingueta Macia Acolchoada</p>
+                  <p>Palmilha Integrada Forrada.</p>         
+              </div>
+          </div>
+          <div class="product">
+              <img src="../../../imgs/bolabasquete.webp" alt="Bola De Basquete Spalding">
+              <h3>Bola De Basquete Spalding Tf-1000 Precision FIBA</h3>
+              <p>Preço: R$ 541,49</p>
+              <p class="toggle-description" onclick="toggleDescription('descbolabasquete')">▼ Mostrar Descrição</p>
+              <div id="descbolabasquete" class="description">
+                  <p>A TF-1000 Precision foi desenvolvida nos mais altos padrões de qualidade e performance que só a Spalding conhece bem, afinal desenvolveu a primeira bola de basquete em 1894. Essa bola conta com selo master de aprovação da Federação Internacional de Basquete (FIBA) e revestimento em microfibra premium e GAME READY GRIP, que desde o primeiro jogo já proporciona o melhor quique e toque, graças à camada adicional de espuma interna. Além disso, foi especialmente desenvolvida para basquete indoor (pisos oficiais). Seu interior conta com enrolamento feito 100% em náilon, que garante proteção e formato perfeito, sem ovalizar com o tempo.</p> 
+                  <h3>
+                      Tamanhos unico
+                  </h3>   
+              </div>
+          </div>
+          <div class="product">
+              <img src="../../../imgs/camisabasquete.webp" alt="Regata Jersey NBA Nike">
+              <h3>Regata Jersey NBA Nike Los Angeles Lakers Lebron James No 23 Masculina</h3>
+              <p>Preço: R$ 277,00</p>
+              <p class="toggle-description" onclick="toggleDescription('descregata')">▼ Mostrar Descrição</p>
+              <div id="descregata" class="description">
+                <h3>
+                    Tamanhos disponiveis
+                    <li>P,M,G,GG</li>
+                </h3>
+                <p>Cada time tem as suas cores, uma identidade inconfundível que a diferencia do resto da liga. Honrando uma rica herança de basquete, esta camisa do Los Angeles Lakers é inspirada no que os profissionais usam na quadra, desde detalhes do time até o mesh leve que absorve o suor. Ele ajuda a manter você seco e fresco, dentro e fora das quadras, enquanto você representa o seu jogador favorito e o jogo que você ama.</p>
+                <p>Benefícios</p>
+                <p>
+                    <li>Tecnologia Nike Dri-FIT absorve o suor da sua pele para evaporação mais rápida, ajudando a manter você seca e confortável.</li>
+                    <li>Mesh respirável ajuda a manter você fresco dentro ou fora de quadra.</li>
+                </p>
+                <p>Detalhes do Produto</p>
+                <p>
+                    <li>Nome e número do jogador em sarja</li>
+                    <li>Desenhos aplicados por termotransferência</li>
+                    <li>Etiqueta jock tag na bainha</li>
+                    <li>100% poliéster</li>
+                    <li>Lavável à máquina</li>
+                    <li>Importado</li>
+                </p>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+  <div class="product">
+              <h2>Informações</h2>
+              <p class="toggle-description" onclick="toggleDescription('informacoes')">▼ Descrição</p>
+              <div id="informacoes" class="description">
+                  <p>Formas de pagamentos aceitas: Pix</p>
+                  <p>CHAVE PIX: 70620581654</p>
+                  <p>Proprietário: Iago Ornels De Souza</p>
+              </div>
+          </div>
+  <footer>
+      <p>&copy; 2025 Loja IAG. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
